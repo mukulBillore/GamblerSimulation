@@ -6,23 +6,21 @@ public class GamblerSimulator {
 
 	public static void main(String[] args) {
 
-		// uc1
 		int everyDayStake = 100;
 		int everyGameBet = 1;
+//uc3
+		while (everyDayStake != 50 || everyDayStake != 150) {
+			Random rand = new Random();
+			int winOrLoose = rand.nextInt(2);
 
-		//uc2 
-		Random rand = new Random();
-		int winOrLoose=rand.nextInt(2);
-		
-		if(winOrLoose==0) {
-			//win
-			everyDayStake=everyDayStake+1;
+			if (winOrLoose == 0) {
+				// win
+				everyDayStake = everyDayStake + 1;
+			} else {// loose
+				everyDayStake = everyDayStake - 1;
+			}
 		}
-		else {
-			everyDayStake=everyDayStake-1;
-		}
-		
-		
+
 	}
 
 }
